@@ -8,8 +8,11 @@
 </head>
 <body>
 
+    <h1 class="explanation">Pokemon Quiz</h1>
 
-    <form action="submit">
+    <form action="submit" class="sections">
+        
+        <h2 class="explanation">Question marked with * are mandatory</h2>
         <!--Only letters-->
         <label for="fname" class="formText">First Name: </label>
         <input type="text" id="fname" class="formInput">
@@ -31,40 +34,41 @@
         </div>
 
         <!--Mandatory-->
-        <label id="favMon" class="formText">Who is my favorite pokemon? </label>
+        <label id="favMon" class="formText">*Which one is a dark type? </label>
         <div class="formInput">
-            <input type="radio" class="choice" name="favMon"><label class="choiceText">Klingklang </label>
-            <input type="radio" class="choice" name="favMon"><label class="choiceText">Slugma </label>
-            <input type="radio" class="choice" name="favMon"><label class="choiceText">Kricketune </label>
-            <input type="radio" class="choice" name="favMon"><label class="choiceText">Giratina </label>
-            <input type="radio" class="choice" name="favMon"><label class="choiceText">Guzzlord </label>
+            <input type="radio" value="Klingklang" class="choice" name="favMon"><label class="choiceText">Klingklang </label>
+            <input type="radio" value="Slugma" class="choice" name="favMon"><label class="choiceText">Slugma </label>
+            <input type="radio" value="Kricketune" class="choice" name="favMon"><label class="choiceText">Kricketune </label>
+            <input type="radio" value="Giratina" class="choice" name="favMon"><label class="choiceText">Giratina </label>
+            <input type="radio" value="Guzzlord" class="choice" name="favMon"><label class="choiceText">Guzzlord </label>
         </div>
 
         <!--Mandatory-->
-        <label for="" class="formText">what's your favorite pokemon?: </label>
+        <label for="" class="formText">*What's your favorite pokemon?: </label>
         <input type="text" id="" class="formInput">
 
         <!--Mandatory-->
-        <label id="typing" class="formText">Which are my favorite pokemon types? <br> (Choose 2)</label>
+        <label id="typing" class="formText">*What typ(es) is Tapu-Koko? <br> (Choose 2)</label>
         <div class="formInput">
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" class="choice" id="grass" name="Grass" value="Grass"><label class="choiceText">Grass</label>
+            <input type="checkbox" value="Normal"class="choice" id="Normal" name="Normal"><label class="choiceText">Normal</label>
+            <input type="checkbox" value="Water"class="choice" id="Water" name="Water"><label class="choiceText">Water</label>
+            <input type="checkbox" value="Grass"class="choice" id="Grass" name="Grass"><label class="choiceText">Grass</label>
+            <input type="checkbox" value="Fire"class="choice" id="Fire" name="Fire"><label class="choiceText">Fire</label>
+            <input type="checkbox" value="Electric"class="choice" id="Electric" name="Electric"><label class="choiceText">Electric</label>
+            <input type="checkbox" value="Ice"class="choice" id="Ice" name="Ice"><label class="choiceText">Ice</label>
+            <input type="checkbox" value="Ground"class="choice" id="Ground" name="Ground"><label class="choiceText">Ground</label>
+            <input type="checkbox" value="Flying"class="choice" id="Flying" name="Flying"><label class="choiceText">Flying</label>
+            <input type="checkbox" value="Fighting"class="choice" id="Fighting" name="Fighting"><label class="choiceText">Fighting</label>
+            <input type="checkbox" value="Poison"class="choice" id="Poison" name="Poison"><label class="choiceText">Poison</label>
+            <input type="checkbox" value="Psychic"class="choice" id="Psychic" name="Psychic"><label class="choiceText">Psychic</label>
+            <input type="checkbox" value="Dark"class="choice" id="Dark" name="Dark"><label class="choiceText">Dark</label>
+            <input type="checkbox" value="Bug"class="choice" id="Bug" name="Bug"><label class="choiceText">Bug</label>
+            <input type="checkbox" value="Rock"class="choice" id="Rock" name="Rock"><label class="choiceText">Rock</label>
+            <input type="checkbox" value="Ghost"class="choice" id="Ghost" name="Ghost"><label class="choiceText">Ghost</label>
+            <input type="checkbox" value="Steel"class="choice" id="Steel" name="Steel"><label class="choiceText">Steel</label>
+            <input type="checkbox" value="Dragon"class="choice" id="Dragon" name="Dragon"><label class="choiceText">Dragon</label>
+            <input type="checkbox" value="Fairy"class="choice" id="Fairy" name="Fairy"><label class="Fairy">Electric</label>
+
         </div>
 
 
@@ -74,8 +78,8 @@
         <input type="submit" id="submitButton" value="submit">
     </form>
 
-    <section>
-        <h1>Answers!</h1>
+    <section class="sections" id="answerBox">
+        <h1 class="explanation">Answers!</h1>
     </section>
 
     
