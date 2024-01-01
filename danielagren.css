@@ -1,0 +1,24 @@
+form {
+    width: 500px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.formText {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: right;
+}
+
+.formInput {
+    grid-column: 2;
+    grid-row: auto;
+}
+
+#bigQuestion {
+    width: 200px;
+    height: 200px;
+    resize: none;
+}
