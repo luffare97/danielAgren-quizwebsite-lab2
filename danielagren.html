@@ -8,80 +8,120 @@
 </head>
 <body>
 
-    <h1 class="explanation">Pokemon Quiz</h1>
+    <h1 class="explanation">Pokémon Quiz</h1>
 
-    <form action="submit" class="sections">
+    <form action="submit" class="sections" id="submitForm">
         
         <h2 class="explanation">Question marked with * are mandatory</h2>
         <!--Only letters-->
-        <label for="fname" class="formText">First Name: </label>
+        <label for="fname" class="formText" id="askFName">*First Name: </label>
         <input type="text" id="fname" class="formInput">
 
         <!--Only letters-->
-        <label for="lname" class="formText">Last Name: </label>
+        <label for="lname" class="formText" id="askLName">*Last Name: </label>
         <input type="text" id="lname" class="formInput">
 
         <!--Right format-->
         <label for="email" class="formText">Email: </label>
         <input type="email" id="email" class="formInput">
 
-        <label class="formText">How much do you know about pokemon? </label>
+        <label class="formText">How much do you know about pokémon? </label>
         <div id="rangeDiv">
             <label for="knowledge">Nothing</label>
             <label for="knowledge" id="master">Master</label>
             <input type="range" id="knowledge" class="formInput" name="knowledge" min="1" max="5">
             
         </div>
+        
+        <!--Mandatory-->
+        <label for="favMon" id="askFmon" class="formText">*What's your favorite pokémon? </label>
+        <input type="text" id="favMon" class="formInput">
 
         <!--Mandatory-->
-        <label id="favMon" class="formText">*Which one is a dark type? </label>
+        <label id="darkMon" class="formText">*Which one is a dark type? </label>
         <div class="formInput">
-            <input type="radio" value="Klingklang" class="choice" name="favMon"><label class="choiceText">Klingklang </label>
-            <input type="radio" value="Slugma" class="choice" name="favMon"><label class="choiceText">Slugma </label>
-            <input type="radio" value="Kricketune" class="choice" name="favMon"><label class="choiceText">Kricketune </label>
-            <input type="radio" value="Giratina" class="choice" name="favMon"><label class="choiceText">Giratina </label>
-            <input type="radio" value="Guzzlord" class="choice" name="favMon"><label class="choiceText">Guzzlord </label>
+            <input type="radio" value="Klingklang" class="choice" name="darkMon"><label class="choiceText">Klingklang </label>
+            <input type="radio" value="Slugma" class="choice" name="darkMon"><label class="choiceText">Slugma </label>
+            <input type="radio" value="Kricketune" class="choice" name="darkMon"><label class="choiceText">Kricketune </label>
+            <input type="radio" value="Giratina" class="choice" name="darkMon"><label class="choiceText">Giratina </label>
+            <input type="radio" value="Guzzlord" class="choice" name="darkMon"><label class="choiceText">Guzzlord </label>
         </div>
 
         <!--Mandatory-->
-        <label for="" class="formText">*What's your favorite pokemon?: </label>
-        <input type="text" id="" class="formInput">
-
-        <!--Mandatory-->
-        <label id="typing" class="formText">*What typ(es) is Tapu-Koko? <br> (Choose 2)</label>
+        <label id="typing" class="formText">*What typ(es) is Tapu-Koko? <br> (Choose up to 2)</label>
         <div class="formInput">
-            <input type="checkbox" value="Normal"class="choice" id="Normal" name="Normal"><label class="choiceText">Normal</label>
-            <input type="checkbox" value="Water"class="choice" id="Water" name="Water"><label class="choiceText">Water</label>
-            <input type="checkbox" value="Grass"class="choice" id="Grass" name="Grass"><label class="choiceText">Grass</label>
-            <input type="checkbox" value="Fire"class="choice" id="Fire" name="Fire"><label class="choiceText">Fire</label>
-            <input type="checkbox" value="Electric"class="choice" id="Electric" name="Electric"><label class="choiceText">Electric</label>
-            <input type="checkbox" value="Ice"class="choice" id="Ice" name="Ice"><label class="choiceText">Ice</label>
-            <input type="checkbox" value="Ground"class="choice" id="Ground" name="Ground"><label class="choiceText">Ground</label>
-            <input type="checkbox" value="Flying"class="choice" id="Flying" name="Flying"><label class="choiceText">Flying</label>
-            <input type="checkbox" value="Fighting"class="choice" id="Fighting" name="Fighting"><label class="choiceText">Fighting</label>
-            <input type="checkbox" value="Poison"class="choice" id="Poison" name="Poison"><label class="choiceText">Poison</label>
-            <input type="checkbox" value="Psychic"class="choice" id="Psychic" name="Psychic"><label class="choiceText">Psychic</label>
-            <input type="checkbox" value="Dark"class="choice" id="Dark" name="Dark"><label class="choiceText">Dark</label>
-            <input type="checkbox" value="Bug"class="choice" id="Bug" name="Bug"><label class="choiceText">Bug</label>
-            <input type="checkbox" value="Rock"class="choice" id="Rock" name="Rock"><label class="choiceText">Rock</label>
-            <input type="checkbox" value="Ghost"class="choice" id="Ghost" name="Ghost"><label class="choiceText">Ghost</label>
-            <input type="checkbox" value="Steel"class="choice" id="Steel" name="Steel"><label class="choiceText">Steel</label>
-            <input type="checkbox" value="Dragon"class="choice" id="Dragon" name="Dragon"><label class="choiceText">Dragon</label>
-            <input type="checkbox" value="Fairy"class="choice" id="Fairy" name="Fairy"><label class="Fairy">Electric</label>
+            <input type="checkbox" value="Normal"class="choice" name="type"><label class="choiceText">Normal</label>
+            <input type="checkbox" value="Water"class="choice" name="type"><label class="choiceText">Water</label>
+            <input type="checkbox" value="Grass"class="choice" name="type"><label class="choiceText">Grass</label>
+            <input type="checkbox" value="Fire"class="choice" name="type"><label class="choiceText">Fire</label>
+            <input type="checkbox" value="Electric"class="choice" name="type"><label class="choiceText">Electric</label>
+            <input type="checkbox" value="Ice"class="choice" name="type"><label class="choiceText">Ice</label>
+            <input type="checkbox" value="Ground"class="choice" name="type"><label class="choiceText">Ground</label>
+            <input type="checkbox" value="Flying"class="choice" name="type"><label class="choiceText">Flying</label>
+            <input type="checkbox" value="Fighting"class="choice" name="type"><label class="choiceText">Fighting</label>
+            <input type="checkbox" value="Poison"class="choice" name="type"><label class="choiceText">Poison</label>
+            <input type="checkbox" value="Psychic"class="choice" name="type"><label class="choiceText">Psychic</label>
+            <input type="checkbox" value="Dark"class="choice" name="type"><label class="choiceText">Dark</label>
+            <input type="checkbox" value="Bug"class="choice" name="type"><label class="choiceText">Bug</label>
+            <input type="checkbox" value="Rock"class="choice" name="type"><label class="choiceText">Rock</label>
+            <input type="checkbox" value="Ghost"class="choice" name="type"><label class="choiceText">Ghost</label>
+            <input type="checkbox" value="Steel"class="choice" name="type"><label class="choiceText">Steel</label>
+            <input type="checkbox" value="Dragon"class="choice" name="type"><label class="choiceText">Dragon</label>
+            <input type="checkbox" value="Fairy"class="choice" name="type"><label class="choiceText">Fairy</label>
 
         </div>
 
 
-        <label class="formText">What do you think of pokemon?: </label>
+        <label class="formText">What do you think of pokémon? </label>
         <textarea name="bigQuestion" id="bigQuestion" cols="30" rows="10" class="formInput"></textarea>
 
-        <input type="submit" id="submitButton" value="submit">
+        <input type="submit" id="submit">
     </form>
 
     <section class="sections" id="answerBox">
-        <h1 class="explanation">Answers!</h1>
+        
+        <div class="personalInfo">
+            <h2 class="explanation">Answers!</h2>
+            <p class="userAnswer">Your name: </p>
+            <p id="nameField">No first name</p>
+
+            <p class="userAnswer">Your email: </p>
+            <p id="emailField">No last name</p>
+
+            <p class="userAnswer">your pokémon knowledge is: </p>
+            <p id="knowledgeAnswer">5</p>
+
+            <p class="userAnswer">Your favorite pokemon is: </p>
+            <p id="FaveMon">bunger</p>
+
+            <p class="userAnswer"> Your thoughts on pokemon: </p>
+            <p id="thoughtsAnswer">here is text about pokémon</p>
+        </div>
+
+        <div class="userAnswer">
+            <p>Your answers</p>
+            <p>The dark type is: </p>
+            <p id="typeQAnswer">Who knows?</p>
+
+            <p>Tapu Kokos types are: </p>
+            <p id="kokoAnswer">Who knows?</p>
+        </div>
+
+        <div class="rightAnswer">
+            <p>Right answers</p>
+
+            <p>The dark type is: </p>
+            <p> Guzzlord</p>
+
+            <p>Tapu Kokos types are: </p>
+            <p>Electric,Fairy</p>
+        </div>
+    
+        
     </section>
 
     
 </body>
+
+    <script src="danielagren.js"></script>
 </html>
