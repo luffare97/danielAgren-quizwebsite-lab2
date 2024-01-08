@@ -32,16 +32,20 @@ checkBoxes.forEach(function(checkbox){
     });
 });
 
+var points;
+
 /* Checks the answers if they are ok of not */
 function CheckAnswers() {
     var ok = true;
+    points = 0;
+    
 
     /* Personal info questions */
     var fname = TextGetter('fname');
     var lname = TextGetter('lname');
     var email = TextGetter('email');
         /* First Name */
-    if (fname.length == 0 || /[0-9]/.test(fname) == true) {        
+    if (fname.length == 0 || /^[A-Za-z]+$/.test(fname) == false) {        
         ok = false;
         document.getElementById('askFName').style.color = 'brown';
     }
@@ -49,7 +53,7 @@ function CheckAnswers() {
         document.getElementById('askFName').style.color = 'black';
     }
         /* Last Name */
-    if (lname.length == 0 || /[0-9]/.test(lname) == true) {
+    if (lname.length == 0 || /^[A-Za-z]+$/.test(lname) == false) {
         ok = false;
         document.getElementById('askLName').style.color = 'brown';
     }
@@ -67,33 +71,11 @@ function CheckAnswers() {
         document.getElementById('askFmon').style.color = 'black';
     }
 
-    var radios = document.getElementsByName('darkMon');
-    var answered = false;
-    var radioAnswer;
-    for (var i = 0, length = radios.length; i < length; i++) {
-        if (radios[i].checked) {
-   
-            if(radios[i].value == "Guzzlord") {
-                document.getElementById('typeQAnswer').style.color = 'green';
-            }
-            else {
-                document.getElementById('typeQAnswer').style.color = 'brown';
-            }
 
-            document.getElementById('typeQAnswer').innerHTML = radios[i].value;
-            answered = true;
-
-        }   
-    }
-
-    if (answered == false) {
-        ok = false;
-        document.getElementById('darkMon').style.color = 'brown';
-    }
-    else {
-        document.getElementById('darkMon').style.color = 'black';
-    }
-
+    ok = radioChecker('darkMon');
+    ok = radioChecker('bugMon');
+    ok = radioChecker('fairyMon');
+    ok = radioChecker('steelMon');
 
 
     if(document.querySelectorAll('input[name="type"]:checked').length == 0) {
@@ -108,23 +90,59 @@ function CheckAnswers() {
 
     /* If everything is ok make it visible */
     if (ok == true) {
+        var result = 'You got ' + points + ' right out of 5';
         document.getElementById('answerBox').style.visibility = "visible"; 
         document.getElementById('nameField').innerHTML = fname + " " + lname;
         document.getElementById('emailField').innerHTML = email;
         document.getElementById('knowledgeAnswer').innerHTML = document.getElementById('knowledge').value + "/5";
         document.getElementById('FaveMon').innerHTML = favMon;
         document.getElementById('thoughtsAnswer').innerHTML = document.getElementById('bigQuestion').value;
-              
+        document.getElementById('score').innerHTML = result;
+        document.getElementById('alertText').innerHTML = "Your answers have been submitted!";
+        document.getElementById('alertText').style.color = "green";
     } 
     else if (ok == false) {
-        alert('the form is not correctly filled out, Please answer all the red questions');
+        document.getElementById('alertText').innerHTML = "Make sure all mandatory questions where answered and formated corectly";
+        document.getElementById('alertText').style.color = "red";
     }
     
 };
 
 function TextGetter (id){
     return document.getElementById(id).value;
-}
+};
+
+function radioChecker (typeMon) {
+    var radios = document.getElementsByName(typeMon);
+    var answered = false;
+    let radioAnswer = typeMon + "Answer";
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+   
+            if(radios[i].value == "right") {
+                document.getElementById(radioAnswer).style.color = 'green';
+                points++;
+            }
+            else {
+                document.getElementById(radioAnswer).style.color = 'brown';
+            }
+
+            
+            answered = true;
+
+        }   
+    }
+
+    if (answered == false) {
+        
+        document.getElementById(typeMon).style.color = 'brown';
+        return false;
+    }
+    else {
+        document.getElementById(typeMon).style.color = 'black';
+        return true;
+    }
+};
 
 function CheckboxChecker () {
     let checkBoxes = document.querySelectorAll('input[name="type"]:checked');
@@ -133,12 +151,12 @@ function CheckboxChecker () {
         values.push(checkbox.value);
     });
 
-    document.getElementById('kokoAnswer').innerHTML = values;
-    if(values.toString() == "Electric,Fairy"){
+    if(values.toString() == "right,right"){
         document.getElementById('kokoAnswer').style.color = 'green';
+        points++;
     }
     else {
         document.getElementById('kokoAnswer').style.color = 'brown';
     }
     
-}
+};

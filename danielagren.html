@@ -14,15 +14,15 @@
         
         <h2 class="explanation">Question marked with * are mandatory</h2>
         <!--Only letters-->
-        <label for="fname" class="formText" id="askFName">*First Name: </label>
+        <label for="fname" class="formText" id="askFName">*First Name: <br> (Only letters)</label>
         <input type="text" id="fname" class="formInput">
 
         <!--Only letters-->
-        <label for="lname" class="formText" id="askLName">*Last Name: </label>
+        <label for="lname" class="formText" id="askLName">*Last Name: <br> (Only letters)</label>
         <input type="text" id="lname" class="formInput">
 
         <!--Right format-->
-        <label for="email" class="formText">Email: </label>
+        <label for="email" class="formText">Email: <br> (Needs to include an '@')</label>
         <input type="email" id="email" class="formInput">
 
         <label class="formText">How much do you know about pokémon? </label>
@@ -40,34 +40,64 @@
         <!--Mandatory-->
         <label id="darkMon" class="formText">*Which one is a dark type? </label>
         <div class="formInput">
-            <input type="radio" value="Klingklang" class="choice" name="darkMon"><label class="choiceText">Klingklang </label>
-            <input type="radio" value="Slugma" class="choice" name="darkMon"><label class="choiceText">Slugma </label>
-            <input type="radio" value="Kricketune" class="choice" name="darkMon"><label class="choiceText">Kricketune </label>
-            <input type="radio" value="Giratina" class="choice" name="darkMon"><label class="choiceText">Giratina </label>
-            <input type="radio" value="Guzzlord" class="choice" name="darkMon"><label class="choiceText">Guzzlord </label>
+            <input type="radio" value="wrong" class="choice" name="darkMon"><label class="choiceText">Klingklang </label>
+            <input type="radio" value="wrong" class="choice" name="darkMon"><label class="choiceText">Slugma </label>
+            <input type="radio" value="wrong" class="choice" name="darkMon"><label class="choiceText">Kricketune </label>
+            <input type="radio" value="wrong" class="choice" name="darkMon"><label class="choiceText">Giratina </label>
+            <input type="radio" value="right" class="choice" name="darkMon"><label class="choiceText">Guzzlord </label>
+        </div>
+
+        <!--Mandatory-->
+        <label id="bugMon" class="formText">*Which one is a bug type? </label>
+        <div class="formInput">
+            <input type="radio" value="wrong" class="choice" name="bugMon"><label class="choiceText">Rattata </label>
+            <input type="radio" value="right" class="choice" name="bugMon"><label class="choiceText">Buzzwole </label>
+            <input type="radio" value="wrong" class="choice" name="bugMon"><label class="choiceText">Magikarp </label>
+            <input type="radio" value="wrong" class="choice" name="bugMon"><label class="choiceText">Carbinc </label>
+            <input type="radio" value="wrong" class="choice" name="bugMon"><label class="choiceText">Timburr </label>
+        </div>
+
+        <!--Mandatory-->
+        <label id="fairyMon" class="formText">*Which one is a fairy type? </label>
+        <div class="formInput">
+            <input type="radio" value="wrong" class="choice" name="fairyMon"><label class="choiceText">Oranguru </label>
+            <input type="radio" value="wrong" class="choice" name="fairyMon"><label class="choiceText">Mareep </label>
+            <input type="radio" value="wrong" class="choice" name="fairyMon"><label class="choiceText">Smoliv </label>
+            <input type="radio" value="right" class="choice" name="fairyMon"><label class="choiceText">Tinkatink </label>
+            <input type="radio" value="wrong" class="choice" name="fairyMon"><label class="choiceText">Charcadet </label>
+        </div>
+
+        <!--Mandatory-->
+        <label id="steelMon" class="formText">*Which one is a steel type? </label>
+        <div class="formInput">
+            <input type="radio" value="right" class="choice" name="steelMon"><label class="choiceText">Revavroom </label>
+            <input type="radio" value="wrong" class="choice" name="steelMon"><label class="choiceText">Litleo </label>
+            <input type="radio" value="wrong" class="choice" name="steelMon"><label class="choiceText">Clawitzer </label>
+            <input type="radio" value="wrong" class="choice" name="steelMon"><label class="choiceText">Morelul </label>
+            <input type="radio" value="wrong" class="choice" name="steelMon"><label class="choiceText">Marshadow </label>
         </div>
 
         <!--Mandatory-->
         <label id="typing" class="formText">*What typ(es) is Tapu-Koko? <br> (Choose up to 2)</label>
         <div class="formInput">
-            <input type="checkbox" value="Normal"class="choice" name="type"><label class="choiceText">Normal</label>
-            <input type="checkbox" value="Water"class="choice" name="type"><label class="choiceText">Water</label>
-            <input type="checkbox" value="Grass"class="choice" name="type"><label class="choiceText">Grass</label>
-            <input type="checkbox" value="Fire"class="choice" name="type"><label class="choiceText">Fire</label>
-            <input type="checkbox" value="Electric"class="choice" name="type"><label class="choiceText">Electric</label>
-            <input type="checkbox" value="Ice"class="choice" name="type"><label class="choiceText">Ice</label>
-            <input type="checkbox" value="Ground"class="choice" name="type"><label class="choiceText">Ground</label>
-            <input type="checkbox" value="Flying"class="choice" name="type"><label class="choiceText">Flying</label>
-            <input type="checkbox" value="Fighting"class="choice" name="type"><label class="choiceText">Fighting</label>
-            <input type="checkbox" value="Poison"class="choice" name="type"><label class="choiceText">Poison</label>
-            <input type="checkbox" value="Psychic"class="choice" name="type"><label class="choiceText">Psychic</label>
-            <input type="checkbox" value="Dark"class="choice" name="type"><label class="choiceText">Dark</label>
-            <input type="checkbox" value="Bug"class="choice" name="type"><label class="choiceText">Bug</label>
-            <input type="checkbox" value="Rock"class="choice" name="type"><label class="choiceText">Rock</label>
-            <input type="checkbox" value="Ghost"class="choice" name="type"><label class="choiceText">Ghost</label>
-            <input type="checkbox" value="Steel"class="choice" name="type"><label class="choiceText">Steel</label>
-            <input type="checkbox" value="Dragon"class="choice" name="type"><label class="choiceText">Dragon</label>
-            <input type="checkbox" value="Fairy"class="choice" name="type"><label class="choiceText">Fairy</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Normal</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Water</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Grass</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Fire</label>
+            <input type="checkbox" value="right" class="choice" name="type"><label class="choiceText">Electric</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Ice</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Ground</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Flying</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Fighting</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Poison</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Psychic</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Dark</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Bug</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Rock</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Ghost</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Steel</label>
+            <input type="checkbox" value="wrong" class="choice" name="type"><label class="choiceText">Dragon</label>
+            <input type="checkbox" value="right" class="choice" name="type"><label class="choiceText">Fairy</label>
 
         </div>
 
@@ -76,46 +106,51 @@
         <textarea name="bigQuestion" id="bigQuestion" cols="30" rows="10" class="formInput"></textarea>
 
         <input type="submit" id="submit">
+
+        <p class="explanation" id="alertText"></p>
     </form>
 
     <section class="sections" id="answerBox">
         
         <div class="personalInfo">
             <h2 class="explanation">Answers!</h2>
-            <p class="userAnswer">Your name: </p>
+            <p>Your name: </p>
             <p id="nameField">No first name</p>
 
-            <p class="userAnswer">Your email: </p>
-            <p id="emailField">No last name</p>
+            <p>Your email: </p>
+            <p id="emailField">No email</p>
 
-            <p class="userAnswer">your pokémon knowledge is: </p>
+            <p>your pokémon knowledge is: </p>
             <p id="knowledgeAnswer">5</p>
 
-            <p class="userAnswer">Your favorite pokemon is: </p>
+            <p>Your favorite pokemon is: </p>
             <p id="FaveMon">bunger</p>
 
-            <p class="userAnswer"> Your thoughts on pokemon: </p>
+            <p> Your thoughts on pokemon: </p>
             <p id="thoughtsAnswer">here is text about pokémon</p>
         </div>
 
-        <div class="userAnswer">
-            <p>Your answers</p>
+        <div class="questionAnswers">
+            <p class="explanation">Results</p>
             <p>The dark type is: </p>
-            <p id="typeQAnswer">Who knows?</p>
+            <p id="darkMonAnswer">Guzzlord</p>
+
+            <p>The bug type is: </p>
+            <p id="bugMonAnswer">Buzzwole</p>
+
+            <p>The fairy type is: </p>
+            <p id="fairyMonAnswer">Tinkatink</p>
+
+            <p>The steel type is: </p>
+            <p id="steelMonAnswer">Revavroom</p>
 
             <p>Tapu Kokos types are: </p>
-            <p id="kokoAnswer">Who knows?</p>
+            <p id="kokoAnswer">Electric,Fairy</p>
+
+            <p class="explanation" id="score">You got x right out of 5</p>
+            
         </div>
 
-        <div class="rightAnswer">
-            <p>Right answers</p>
-
-            <p>The dark type is: </p>
-            <p> Guzzlord</p>
-
-            <p>Tapu Kokos types are: </p>
-            <p>Electric,Fairy</p>
-        </div>
     
         
     </section>
