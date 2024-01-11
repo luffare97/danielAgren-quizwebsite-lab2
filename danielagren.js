@@ -60,8 +60,18 @@ function CheckAnswers() {
     else {
         document.getElementById('askLName').style.color = 'black';
     }
+        /* Email */
+    if (email.length == 0) {
+        ok = false;
+        document.getElementById('askEmail').style.color = 'brown';
+    }
+    else {
+        document.getElementById('askEmail').style.color = 'black';
+    }
     
         /* Pokémon questions */
+    var mandatory = true;
+
     var favMon = TextGetter('favMon');
     if (favMon.length == 0) {
         ok = false;
@@ -70,12 +80,15 @@ function CheckAnswers() {
     else {
         document.getElementById('askFmon').style.color = 'black';
     }
-
-
-    ok = radioChecker('darkMon');
-    ok = radioChecker('bugMon');
-    ok = radioChecker('fairyMon');
-    ok = radioChecker('steelMon');
+   
+    mandatory = false;
+    radioChecker('darkMon', mandatory);
+    mandatory = false;
+    radioChecker('bugMon', mandatory);   
+    mandatory = true;
+    radioChecker('fairyMon', mandatory);
+    mandatory = true;
+    radioChecker('steelMon', mandatory);
 
 
     if(document.querySelectorAll('input[name="type"]:checked').length == 0) {
@@ -112,7 +125,7 @@ function TextGetter (id){
     return document.getElementById(id).value;
 };
 
-function radioChecker (typeMon) {
+function radioChecker (typeMon, mandatory) {
     var radios = document.getElementsByName(typeMon);
     var answered = false;
     let radioAnswer = typeMon + "Answer";
@@ -135,12 +148,16 @@ function radioChecker (typeMon) {
 
     if (answered == false) {
         
-        document.getElementById(typeMon).style.color = 'brown';
-        return false;
+        
+        if(mandatory == true) {
+            document.getElementById(typeMon).style.color = 'brown';
+            ok = false;
+        }
+        
     }
     else {
         document.getElementById(typeMon).style.color = 'black';
-        return true;
+        
     }
 };
 

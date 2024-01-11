@@ -22,7 +22,7 @@
         <input type="text" id="lname" class="formInput">
 
         <!--Right format-->
-        <label for="email" class="formText">Email: <br> (Needs to include an '@')</label>
+        <label for="email" class="formText" id="askEmail">*Email: <br> (Needs to include an '@')</label>
         <input type="email" id="email" class="formInput">
 
         <label class="formText">How much do you know about pokémon? </label>
@@ -37,8 +37,8 @@
         <label for="favMon" id="askFmon" class="formText">*What's your favorite pokémon? </label>
         <input type="text" id="favMon" class="formInput">
 
-        <!--Mandatory-->
-        <label id="darkMon" class="formText">*Which one is a dark type? </label>
+        
+        <label id="darkMon" class="formText">Which one is a dark type? </label>
         <div class="formInput">
             <input type="radio" value="wrong" class="choice" name="darkMon"><label class="choiceText">Klingklang </label>
             <input type="radio" value="wrong" class="choice" name="darkMon"><label class="choiceText">Slugma </label>
@@ -48,7 +48,7 @@
         </div>
 
         <!--Mandatory-->
-        <label id="bugMon" class="formText">*Which one is a bug type? </label>
+        <label id="bugMon" class="formText">Which one is a bug type? </label>
         <div class="formInput">
             <input type="radio" value="wrong" class="choice" name="bugMon"><label class="choiceText">Rattata </label>
             <input type="radio" value="right" class="choice" name="bugMon"><label class="choiceText">Buzzwole </label>
@@ -114,6 +114,8 @@
         
         <div class="personalInfo">
             <h2 class="explanation">Answers!</h2>
+            <p class="explanation"> Red text means wrong answer and green means right</p>
+
             <p>Your name: </p>
             <p id="nameField">No first name</p>
 
